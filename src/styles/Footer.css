@@ -1,0 +1,32 @@
+/* Footer.css */
+.footer-section {
+    background-color: var(--bg-secondary);
+    border-top: 1px solid var(--border);
+    padding: var(--space-lg) 0;
+    margin-top: auto;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-container p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.footer-links span {
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: var(--space-sm);
+        text-align: center;
+    }
+}
