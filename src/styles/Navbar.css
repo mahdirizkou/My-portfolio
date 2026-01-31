@@ -7,23 +7,19 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+/* ✅ FLEX layout: Center links truly centered */
 .nav-container {
     height: 70px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
 
-    display: grid;
-    grid-template-columns: auto 1fr auto;
+    display: flex;
     align-items: center;
-}
-
-/* Logo */
-.logo {
-    font-size: 22px;
-    font-weight: 700;
-    color: #4ec9b0;
-    cursor: pointer;
+    justify-content: center;
+    /* مركز الروابط */
+    position: relative;
+    /* باش نحطو اليمين absolute */
 }
 
 /* CENTER LINKS */
@@ -61,7 +57,18 @@
     width: 100%;
 }
 
-/* RIGHT ICONS */
+/* ✅ RIGHT SIDE pinned */
+.nav-actions {
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Social icons */
 .nav-socials {
     display: flex;
     gap: 16px;
@@ -92,16 +99,27 @@
     fill: #00ffaa;
 }
 
-/* Mobile */
+/* Mobile toggle */
 .menu-toggle {
     display: none;
     background: none;
     border: none;
     font-size: 26px;
     color: white;
+    cursor: pointer;
 }
 
+/* Mobile */
 @media (max-width: 768px) {
+    .nav-container {
+        justify-content: flex-end;
+        /* في الموبايل نخلي اليمين */
+    }
+
+    .nav-actions {
+        right: 16px;
+    }
+
     .nav-links {
         position: absolute;
         top: 70px;
@@ -110,8 +128,10 @@
         background: #070a12;
         flex-direction: column;
         align-items: center;
-        padding: 20px 0;
+        padding: 18px 0;
+        gap: 18px;
         display: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .nav-links.active {
