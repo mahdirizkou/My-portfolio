@@ -36,7 +36,7 @@
 
 ## 🌐 Connect
 - GitHub: [@mahdirizkou](https://github.com/mahdirizkou)
-- LinkedIn: [Your LinkedIn](https://linkedin.com)
+- LinkedIn: [Mahdi Rizkou](https://www.linkedin.com/in/mahdirizkou/)
 
 ---
 
